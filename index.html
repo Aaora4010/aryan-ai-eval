@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aryan Singh | AI Evaluation Laboratory</title>
+    <!-- Include Inter font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Meta tags for SEO -->
+    <meta name="description" content="Portfolio of Aryan Singh - AI Evaluation Laboratory">
+  </head>
+  <body class="bg-background text-surface font-sans antialiased overflow-x-hidden">
+    <div id="error-container" style="color: red; font-family: monospace; padding: 20px; z-index: 9999; position: relative;"></div>
+    <script>
+      window.addEventListener('error', function(event) {
+        document.getElementById('error-container').innerText += '\nERROR: ' + event.message;
+      });
+      window.addEventListener('unhandledrejection', function(event) {
+        document.getElementById('error-container').innerText += '\nPROMISE ERROR: ' + event.reason;
+      });
+    </script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
